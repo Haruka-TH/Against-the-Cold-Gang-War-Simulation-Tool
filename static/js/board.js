@@ -133,7 +133,7 @@ class Unit {
             ctx.beginPath();
             ctx.arc(eraseCursorPos.x, eraseCursorPos.y, 10, 0, 2 * Math.PI);
             ctx.strokeStyle = 'rgba(255, 0, 0, 0.8)';
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 6;
             ctx.stroke();
         }
     }

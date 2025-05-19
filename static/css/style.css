@@ -81,8 +81,8 @@ canvas#board {
 .unit-icon.red { background: #c0392b; }
 .unit-icon.orange { background: #f39c12; }
 .unit-icon.yellow { background: #f1c40f; color: black; }
-.unit-icon.green { background: #27ae60; }
-.unit-icon.blue { background: #2980b9; }
+.unit-icon.green { background: #59d959; }
+.unit-icon.blue { background: #419edc; }
 .unit-icon.purple { background: #8e44ad; }
 .unit-icon.black { background: #2c3e50; }
 
