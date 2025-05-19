@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 
 // 地圖背景圖
 const background = new Image();
-background.src = '/static/images/main_low.jpg';
+background.src = 'static/images/main_low.jpg';
 
 // 圖片資源：塔 & 旗
 const images = {
@@ -25,10 +25,10 @@ for (let key in images) {
     };
 }
 
-images['flag_blue'].src = '/static/images/flag_blue.png';
-images['flag_red'].src = '/static/images/flag_red.png';
-images['tower_blue'].src = '/static/images/town_blue.png';
-images['tower_red'].src = '/static/images/town_red.png';
+images['flag_blue'].src = 'static/images/flag_blue.png';
+images['flag_red'].src = 'static/images/flag_red.png';
+images['tower_blue'].src = 'static/images/town_blue.png';
+images['tower_red'].src = 'static/images/town_red.png';
 
 
 // 所有單位物件（塔、旗子、棋子）
