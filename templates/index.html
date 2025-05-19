@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>逆水寒幫戰推演</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <div id="unit-toolbar">
+        <div class="unit-icon red" onclick="addMarker('red')">+</div>
+        <div class="unit-icon orange" onclick="addMarker('orange')">+</div>
+        <div class="unit-icon yellow" onclick="addMarker('yellow')">+</div>
+        <div class="unit-icon green" onclick="addMarker('green')">+</div>
+        <div class="unit-icon blue" onclick="addMarker('blue')">+</div>
+        <div class="unit-icon purple" onclick="addMarker('purple')">+</div>
+        <div class="unit-icon black" onclick="addMarker('black')">+</div>
+
+        <img class="structure-icon" src="/static/images/flag_blue.png" onclick="addUnit('flag_blue')" title="我方旗子">
+        <img class="structure-icon" src="/static/images/flag_red.png" onclick="addUnit('flag_red')" title="敵方旗子">
+        <img class="structure-icon" src="/static/images/town_blue.png" onclick="addUnit('tower_blue')" title="我方塔">
+        <img class="structure-icon" src="/static/images/town_red.png" onclick="addUnit('tower_red')" title="敵方塔">
+        <hr>
+        <button onclick="setLineColor('red')">🔴</button>
+        <button onclick="setLineColor('blue')">🔵</button>
+        <button onclick="setLineColor('yellow')">🟡</button>
+        <button onclick="setLineColor('green')">🟢</button>
+        <button onclick="clearAllLines()">🧹 清除線條</button>
+        <button id="btnFree" onclick="setLineType('free')">✏ 自由畫線</button>
+        <button id="btnLine" onclick="setLineType('straight')">📏 拉直線</button>
+        <button id="drawToggleBtn" onclick="toggleDrawMode()">🎯 啟用/關閉畫線</button>
+        <div id="line-style-controls" style="display: inline-block;">
+            <button id="btnSolid" onclick="setLineDash(false)">──</button>
+            <button id="btnDashed" onclick="setLineDash(true)">– – –</button>
+        
+            <button id="arrowNone" onclick="setArrowMode('none')">➖</button>
+            <button id="arrowEnd" onclick="setArrowMode('end')">←</button>
+            <button id="arrowStart" onclick="setArrowMode('start')">→</button>
+            <button id="arrowBoth" onclick="setArrowMode('both')">↔</button>
+        
+            <button id="btnDeleteLineMode" onclick="toggleDeleteLineMode()">🗑 刪除線</button>
+        </div>
+    </div>
+
+    
+    <div id="canvas-wrapper">
+        <canvas id="board" width="1280" height="720"></canvas>
+    </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/board.js') }}"></script>
+</body>
+</html>
